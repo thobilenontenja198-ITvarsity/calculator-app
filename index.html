@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css"> 
+    <link rel="stylesheet" href="style.css"/>
+    <title>Calculator App</title>
+</head>
+<body>
+
+    <table border="1">
+
+        <tr>
+            <td colspan="4">
+                <input type="text" id="inputBox" value="0"/>
+
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td onClick="digitBtnPressed(7)">7</td>
+            <td onClick="digitBtnPressed(8)">8</td>
+            <td onClick="digitBtnPressed(6)">9</td>
+            <td onClick="digitBtnPressed(x)">x</td>
+        </tr>
+
+        
+        <tr>
+            <td onClick="digitBtnPressed(4)">4</td>
+            <td onClick="digitBtnPressed(5)">5</td>
+            <td onClick="digitBtnPressed(6)">6</td>
+            <td onClick="digitBtnPressed(-)">-</td>
+        </tr>
+
+
+        <tr>
+            <td onClick="digitBtnPressed(1)">1</td>
+            <td onClick="digitBtnPressed(2)">2</td>
+            <td onClick="digitBtnPressed(3)">3</td>
+            <td onClick="digitBtnPressed(+)">+</td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2">0</td>
+            <td>AC</td>
+            <td>/</td>
+        </tr>
+
+        <tr>
+            <td colspan="4">=</td>
+        </tr>
+       
+
+    </table>
+
+    <script>
+        var newLine = true;
+        function digitBtnPressed(){
+            if(newLine == true){
+                document.getElementById("inputBox").value = button;
+                newLine = false;
+            } else{
+                var currentValue = document.getElementById("inputBox").value;
+                document.getElementById("inputBox").value = curretValue + button;
+            }
+           
+        }
+    </script>
+
+
+
+  
+
+</body>
+</html>
